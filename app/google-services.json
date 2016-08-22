@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "1094182699048",
+    "project_id": "miniserver-1470719906446"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094182699048:android:1ef624657a0fabe0",
+        "android_client_info": {
+          "package_name": "com.jeon.devloper.miniproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK5aj6ybzU542KFZXVC4EmEP0PEzDpygY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.jeon.devloper.miniproject.Data.FacebookUser;
 import com.jeon.devloper.miniproject.MainActivity;
 import com.jeon.devloper.miniproject.R;
 
@@ -24,6 +25,13 @@ public class SimpleLoginActivity extends AppCompatActivity {
     public void changeSingup() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, new SignUpFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    public void changeFacebookSignup(FacebookUser user) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, FacebookSignupFragment.newInstance(user))
                 .addToBackStack(null)
                 .commit();
     }

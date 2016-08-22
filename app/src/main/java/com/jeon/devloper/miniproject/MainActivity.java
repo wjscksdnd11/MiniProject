@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.facebook.login.LoginManager;
 import com.jeon.devloper.miniproject.Data.NetworkResult;
 import com.jeon.devloper.miniproject.login.SimpleLoginActivity;
 import com.jeon.devloper.miniproject.manager.NetworkManager;
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onSuccess(NetworkRequest<NetworkResult<String>> request, NetworkResult<String> result) {
                     PropertyManager.getInstance().setEmail("");
                     PropertyManager.getInstance().setPassword("");
+                    PropertyManager.getInstance().setFacebookId("");
+                    LoginManager.getInstance().logOut();
                     Intent intent = new Intent(MainActivity.this, SimpleLoginActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
